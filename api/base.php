@@ -137,7 +137,7 @@ function dd($array)
 }
 function to($url)
 {
-    header("location" . $url); //header把頁面轉到 主機的location
+    header("location:" . $url); //header把頁面轉到 主機的location
 }
 function q($sql) //跟資料庫連線的function
 {
@@ -146,6 +146,7 @@ function q($sql) //跟資料庫連線的function
     return $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 }
 $bottom=new DB('bottom');
+$Title=new DB('title');
 
 $db = new DB('bottom');
 // $bot = $db->all();
