@@ -147,6 +147,7 @@ function q($sql) //跟資料庫連線的function
 }
 $bottom=new DB('bottom');
 $Title=new DB('title');
+$Ad=new DB('ad');
 
 $db = new DB('bottom');
 // $bot = $db->all();
