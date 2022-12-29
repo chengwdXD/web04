@@ -1,4 +1,4 @@
-<h3>新增動畫圖片</h3>
+<h3>新增校園映像資料</h3>
 <hr>
 <form action="./api/add.php" method="post" enctype="multipart/form-data"> 
     <table>
@@ -12,7 +12,7 @@
     </table>
     <div>
         <input type="submit" value="新增">
-        <input type="hidden" name="table" value="Mvim">
+        <input type="hidden" name="table" value="Image">
 
         <input type="reset" value="重製">
     </div>

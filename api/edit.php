@@ -37,6 +37,9 @@ foreach($_POST['id'] as $idx => $id){
 
                 break;
                 case "Admin":
+                    $row['acc']=$_POST['acc'][$idx];
+                    $row['pw']=$_POST['pw'][$idx];
+
                     break;
                     case "Menu":
                     break;
@@ -47,7 +50,7 @@ foreach($_POST['id'] as $idx => $id){
                     }
                     // echo $idx;
                     $row['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
-                    dd($row);
+                    // dd($row);
         }
         
         $$table->save($row);
