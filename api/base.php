@@ -148,6 +148,7 @@ function q($sql) //跟資料庫連線的function
 $bottom=new DB('bottom');
 $Title=new DB('title');
 $Ad=new DB('ad');
+$Mvim=new DB('mvim');
 
 $db = new DB('bottom');
 // $bot = $db->all();

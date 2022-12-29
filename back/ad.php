@@ -1,7 +1,7 @@
 <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
     <p class="t cent botli">動態文字廣告管理</p>
     <!-- <form method="post" target="back" action="?do=tii"> -->
-    <form method="post" action="./api/edit_ad.php">
+    <form method="post" action="./api/edit.php">
         <table width="100%">
             <tbody>
                 <tr class="yel">
@@ -22,6 +22,7 @@
                     </td>
                     <td>
                         <input type="checkbox" name="sh[]" value="<?=$row['id'];?>"  <?=$checked;?>>
+                        <!-- sh沒有+[]時只有單選  有+[]時,為陣列可以複選 -->
                     </td>
                     <td>
                         <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
@@ -43,6 +44,7 @@
                               value="新增動態文字廣告">
                     </td>
                     <td class="cent">
+                        <input type="hidden" name="table" value="Ad">
                         <input type="submit" value="修改確定"><input type="reset" value="重置">
                     </td>
                 </tr>
