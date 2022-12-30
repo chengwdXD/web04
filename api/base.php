@@ -152,6 +152,7 @@ $Mvim=new DB('mvim');
 $Image=new DB('image');
 $News=new DB('news');
 $Admin=new DB('admin');
+$Menu=new DB('menu');
 
 $db = new DB('bottom');
 // $bot = $db->all();

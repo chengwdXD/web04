@@ -42,6 +42,10 @@ foreach($_POST['id'] as $idx => $id){
 
                     break;
                     case "Menu":
+                        $row['name']=$_POST['name'][$idx];
+                        $row['href']=$_POST['href'][$idx];  
+                        $row['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
+
                     break;
                     default:
                     if(isset($_POST['text'])){
@@ -51,6 +55,7 @@ foreach($_POST['id'] as $idx => $id){
                     // echo $idx;
                     $row['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
                     // dd($row);
+                    // dd($idx);
         }
         
         $$table->save($row);

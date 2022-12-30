@@ -15,7 +15,11 @@ switch($table){
         $data['acc']=$_POST['acc'];
         $data['pw']=$_POST['pw'];
     break;
-    case "menu":
+    case "Menu":
+        $data['name']=$_POST['name'];
+        $data['href']=$_POST['href'];
+        $data['sh']=1;
+        $data['parent']=0;
     break;
     default:
     if(isset($_POST['text'])){
