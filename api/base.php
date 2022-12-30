@@ -155,37 +155,18 @@ $Admin=new DB('admin');
 $Menu=new DB('menu');
 $Total=new DB('total');
 
+if(!isset($_SESSION['visit'])){ //判斷session是否存在
+    //如果不存在的話執行以下
+$_SESSION['visit']=1;
+$total=$Total->find(1);
+$total['total']++;
+$Total->save($total);
+}
+
+
+
+
 $db = new DB('bottom');
-// $bot = $db->all();
-// print_r($bot);
-// $db->del(4);
-// print_r($db->all());
-// $db->save(['bottom'=>"202221226"]);
-// $row = $db->find(1);
-// print_r($row);
-
-// $row['bottom'] = "20237777";
-// print_r($row);
-// $db->save($row);
-
-
-//解構
-// $array=['a'=>'b','c'='d'];
-// extract($array);
-// echo '$a='.$a;
-// echo '$c='.$c;
-// echo "資料總數為:".$db->count();
-// echo "<br>";
-// echo "資料加總為:".$db->sum('price'," where id in(1,5)");
-// echo "<br>";
-// echo "價格最大為:".$db->max('price');
-// echo "<br>";
-// echo "id最小為:".$db->min('id');
-// echo "<br>";
-// echo "平均價格為:".$db->avg('price');
-// echo "<br>";
-// echo "<br>";
-
 
 
 
