@@ -26,7 +26,7 @@
                         <td>
                             <input type="text" name="href[]" value="<?= $row['href']; ?>" style="width:95%">
                         </td>
-                        <td></td>
+                        <td><?=$Menu->count(['parent'=>$row['id']]);?></td>
                         <td>
                             <input type="checkbox" name="sh[]" value="<?= $row['id']; ?>" <?=$checked;?>>
                         </td>
@@ -34,7 +34,7 @@
                             <input type="checkbox" name="del[]" value="<?= $row['id']; ?>">
                         </td>
                         <td>
-                            <input type="button" value="編輯次選單" onclick="op('#cover','#cvr','./model/submenu.php')">
+                            <input type="button" value="編輯次選單" onclick="op('#cover','#cvr','./model/submenu.php?id=<?=$row['id'];?>')">
                         </td>
 
                         <input type="hidden" name="id[]" value="<?= $row['id']; ?>">

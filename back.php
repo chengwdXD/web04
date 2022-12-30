@@ -112,7 +112,7 @@ include "./api/base.php";
 			<span class="t" style="line-height:123px;">
 			<?php
      
-	 echo $bottom->find(1)['bottom'];
+	 echo $Bottom->find(1)['bottom'];
 
    ?>
 		</span>

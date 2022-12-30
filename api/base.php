@@ -145,7 +145,7 @@ function q($sql) //跟資料庫連線的function
     $pdo = new PDO($dsn, 'root', '');
     return $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 }
-$bottom=new DB('bottom');
+$Bottom=new DB('bottom');
 $Title=new DB('title');
 $Ad=new DB('ad');
 $Mvim=new DB('mvim');
@@ -153,6 +153,7 @@ $Image=new DB('image');
 $News=new DB('news');
 $Admin=new DB('admin');
 $Menu=new DB('menu');
+$Total=new DB('total');
 
 $db = new DB('bottom');
 // $bot = $db->all();
