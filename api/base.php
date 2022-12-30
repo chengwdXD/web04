@@ -158,7 +158,7 @@ $Total=new DB('total');
 if(!isset($_SESSION['visit'])){ //判斷session是否存在
     //如果不存在的話執行以下
 $_SESSION['visit']=1;
-$total=$Total->find(1);
+$total=$Total->find(1);//人數+1
 $total['total']++;
 $Total->save($total);
 }
