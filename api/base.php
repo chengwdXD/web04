@@ -49,7 +49,7 @@ class DB
     {
         if (isset($array['id'])) {
             $id = $array['id'];//更新
-            unset($array['id']);
+            unset($array['id']);//UNSET取消設定
             $tmp = $this->arrayToSqlArray($array);
             $sql = "update $this->table set " . join(",", $tmp) . " where `id`='$id'";
         } else {
@@ -57,7 +57,7 @@ class DB
             $sql = "insert into $this->table (`" . join("`,`", $cols) . "`) value('" . join("','", $array) . "')";
             //INSERT INTO `bottom`(`id`, `bottom`) VALUES ('[value-1]','[value-2]') sql語法
         }
-        echo $sql;
+        // echo $sql;
         $this->pdo->exec($sql);
     }
     public function del($id)

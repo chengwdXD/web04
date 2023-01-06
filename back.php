@@ -79,7 +79,7 @@ include "./api/base.php";
 				</table>
 				<?php
 				$do = $_GET['do'] ?? 'title'; //三元運算式
-				// $do=(isset($_GET['do']))?$_GET['do']:'title'; // 77/78行意思一樣 寫法不同
+				// $do=(isset($_GET['do']))?$_GET['do']:'title'; // 與上行意思一樣 寫法不同
 				$file = "./back/" . $do . ".php";
 				if (file_exists(($file))) {
 					include $file;

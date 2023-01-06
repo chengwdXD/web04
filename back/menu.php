@@ -13,7 +13,7 @@
                     <td></td>
                 </tr>
                 <?php
-                $rows = $Menu->all(["parent"=>0]);//parent為0時,才將主選單顯示出來
+                $rows = $Menu->all(["parent"=>0]);
                 foreach ($rows as $row) {
                     $checked=($row['sh']==1)?"checked":"";
                     
